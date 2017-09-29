@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('eigo-mondai/{pageNo}', 'EigoMondaiController@show');
+Route::get('eigo-mondai-info', 'EigoMondaiController@showInfo');

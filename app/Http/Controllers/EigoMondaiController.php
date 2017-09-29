@@ -63,6 +63,20 @@ class EigoMondaiController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int  $pageNo
+     * @return \Illuminate\Http\Response
+     */
+    public function showInfo()
+    {
+        $infoArray = ["numOfMondaiSet" => NUM_OF_MONDAI_SET, "numOfMondaiPerPage" => NUM_OF_MONDAI_PER_PAGE];
+        //$out = array_values($infoArray);
+        $json = json_encode($infoArray);
+        return $json;
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
